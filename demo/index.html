@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>nc-combo demo</title>
+
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <script type="module">
+      import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
+      import '@polymer/iron-demo-helpers/demo-snippet';
+    </script>
+
+    <script type="module" src="../nc-combo.js"></script>
+
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+      </style>
+    </custom-style>
+  </head>
+  <body unresolved>
+    <div class="vertical-section-container centered">
+      <h3>Basic combo</h3>
+      <demo-snippet>
+        <template>
+          <nc-combo
+              label="Pais"
+              combo-list-data='{"data": [
+                {"code": "DEU", "name": "Alemania"},
+                {"code": "ESP", "name": "España"},
+                {"code": "USA", "name": "Estados Unidos"},
+                {"code": "FRA", "name": "Francia"}
+              ]}'
+              url-translate="/demo/data/translations.json"
+              value="FRA"
+              language="ca">
+          </nc-combo>
+        </template>
+      </demo-snippet>
+  
+      <h3>The id-field attribute especifies the field to save in value. The load-first attribute select first item</h3>
+      <demo-snippet>
+        <template>
+          <nc-combo
+              label="Ciudad"
+              combo-list-data='{"data": [
+                {"id": "BCN", "name": "Barcelona"}
+              ]}'
+              url-translate="/demo/data/translations.json"
+              id-field="id"
+              load-first
+              language="es">
+          </nc-combo>
+        </template>
+      </demo-snippet>
+    </div>
+  </body>
+</html>

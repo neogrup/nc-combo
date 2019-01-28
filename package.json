@@ -1,0 +1,20 @@
+{
+  "name": "nc-combo",
+  "main": "nc-combo.js",
+  "dependencies": {
+    "@polymer/app-localize-behavior": "^3.0.1",
+    "@polymer/paper-dropdown-menu": "^3.0.1",
+    "@polymer/paper-item": "^3.0.1",
+    "@polymer/paper-listbox": "^3.0.1",
+    "@polymer/polymer": "^3.0.0",
+    "web-animations-js": "^2.3.1"
+  },
+  "devDependencies": {
+    "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
+    "@polymer/test-fixture": "^4.0.2",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "wct-mocha": "^1.0.0"
+  }
+}
