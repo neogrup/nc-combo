@@ -1,5 +1,17 @@
 {
-  "name": "nc-combo",
+  "description": "Polymer component for display a list of items",
+  "keywords": [
+    "web-components",
+    "polymer",
+    "neocloud"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NEOGRUP/nc-combo"
+  },
+  "homepage": "",
+  "name": "@neogrup/nc-combo",
+  "version": "1.0.0",
   "main": "nc-combo.js",
   "dependencies": {
     "@polymer/app-localize-behavior": "^3.0.1",
