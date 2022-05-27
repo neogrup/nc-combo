@@ -11,7 +11,7 @@
   },
   "homepage": "",
   "name": "@neogrup/nc-combo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "nc-combo.js",
   "dependencies": {
     "@polymer/app-localize-behavior": "^3.0.1",

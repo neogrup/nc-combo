@@ -33,7 +33,7 @@ class NcCombo extends mixinBehaviors([AppLocalizeBehavior], PolymerElement) {
       </style>
       
       
-      <paper-dropdown-menu  id="combo" error-message="{{localize(requiredMessage)}}" label="{{label}}" selected-item="{{selectedItem}}" selected-item-label="{{selected}}" no-Animations focused>
+      <paper-dropdown-menu  id="combo" error-message="{{localize(requiredMessage)}}" label="{{label}}" no-label-float={{noLabelFloat}} selected-item="{{selectedItem}}" selected-item-label="{{selected}}" no-Animations focused>
         <paper-listbox id="menu" slot="dropdown-content" selected="{{value}}" attr-for-selected="value" >
           <template is="dom-if" if="{{translationsLoaded}}">
             <template is="dom-repeat" items="{{comboListData.data}}" as="item">
@@ -60,6 +60,10 @@ class NcCombo extends mixinBehaviors([AppLocalizeBehavior], PolymerElement) {
       },
       label: {
         type: String
+      },
+      noLabelFloat: {
+        type: Boolean,
+        value: false
       },
       urlTranslate:{
         type: String
