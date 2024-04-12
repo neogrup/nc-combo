@@ -73,6 +73,11 @@ class NcCombo extends mixinBehaviors([AppLocalizeBehavior], PolymerElement) {
         value: "",
         notify: true
       },
+      codeName: {
+        type: Boolean,
+        value: false,
+        notify: true
+      },
       required: {
         type: Boolean,
         observer: '_setRequired',
@@ -141,7 +146,11 @@ class NcCombo extends mixinBehaviors([AppLocalizeBehavior], PolymerElement) {
   }
 
   _getDescField(item) {
-    return this.localize(item[this.descField]);
+    if (this.codeName) {
+      return item[this.idField] + ' - ' + this.localize(item[this.descField]);
+    } else {
+      return this.localize(item[this.descField]);
+    }
   }
 }
 
